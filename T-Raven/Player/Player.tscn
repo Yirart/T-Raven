@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Player.gd" type="Script" id=1]
+[ext_resource path="res://Player/proposition.png" type="Texture" id=2]
+[ext_resource path="res://Player/MediumShadow.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 4.3866, 15.4607 )
+
+[node name="Player" type="KinematicBody2D"]
+position = Vector2( 237.202, 186.306 )
+scale = Vector2( 1.31424, 1.37605 )
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -9.91643, 0.78931 )
+scale = Vector2( 0.0617814, 0.0924771 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -11.0051, 2.90956 )
+shape = SubResource( 1 )
+
+[node name="MediumShadow" type="Sprite" parent="."]
+show_behind_parent = true
+position = Vector2( -10.3125, 23.068 )
+texture = ExtResource( 3 )
